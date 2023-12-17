@@ -31,25 +31,25 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelTop_NAN = new System.Windows.Forms.Panel();
-            this.buttonHelp_NAN = new System.Windows.Forms.Button();
             this.buttonDiag_NAN = new System.Windows.Forms.Button();
+            this.buttonHelp_NAN = new System.Windows.Forms.Button();
             this.panelLeft_NAN = new System.Windows.Forms.Panel();
             this.groupBoxAddPerson_NAN = new System.Windows.Forms.GroupBox();
-            this.labelEntrance_NAN = new System.Windows.Forms.Label();
-            this.textBoxEntrance_NAN = new System.Windows.Forms.TextBox();
-            this.labelFlat_NAN = new System.Windows.Forms.Label();
-            this.textBoxFlat_NAN = new System.Windows.Forms.TextBox();
-            this.labelRooms_NAN = new System.Windows.Forms.Label();
-            this.textBoxRooms_NAN = new System.Windows.Forms.TextBox();
-            this.labelSurname_NAN = new System.Windows.Forms.Label();
-            this.textBoxSurname_NAN = new System.Windows.Forms.TextBox();
-            this.labelMembers_NAN = new System.Windows.Forms.Label();
-            this.textBoxMembers_NAN = new System.Windows.Forms.TextBox();
-            this.labelKids_NAN = new System.Windows.Forms.Label();
-            this.textBoxKids_NAN = new System.Windows.Forms.TextBox();
-            this.labelArrears_NAN = new System.Windows.Forms.Label();
-            this.textBoxArrears_NAN = new System.Windows.Forms.TextBox();
             this.buttonAddPerson_NAN = new System.Windows.Forms.Button();
+            this.textBoxArrears_NAN = new System.Windows.Forms.TextBox();
+            this.labelArrears_NAN = new System.Windows.Forms.Label();
+            this.textBoxKids_NAN = new System.Windows.Forms.TextBox();
+            this.labelKids_NAN = new System.Windows.Forms.Label();
+            this.textBoxMembers_NAN = new System.Windows.Forms.TextBox();
+            this.labelMembers_NAN = new System.Windows.Forms.Label();
+            this.textBoxSurname_NAN = new System.Windows.Forms.TextBox();
+            this.labelSurname_NAN = new System.Windows.Forms.Label();
+            this.textBoxRooms_NAN = new System.Windows.Forms.TextBox();
+            this.labelRooms_NAN = new System.Windows.Forms.Label();
+            this.textBoxFlat_NAN = new System.Windows.Forms.TextBox();
+            this.labelFlat_NAN = new System.Windows.Forms.Label();
+            this.textBoxEntrance_NAN = new System.Windows.Forms.TextBox();
+            this.labelEntrance_NAN = new System.Windows.Forms.Label();
             this.panelRight_NAN = new System.Windows.Forms.Panel();
             this.dataGridViewMatrix_NAN = new System.Windows.Forms.DataGridView();
             this.panelTop_NAN.SuspendLayout();
@@ -70,26 +70,28 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelTop_NAN.Size = new System.Drawing.Size(1082, 78);
             this.panelTop_NAN.TabIndex = 0;
             // 
-            // buttonHelp_NAN
-            // 
-            this.buttonHelp_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHelp_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHelp_NAN.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_NAN.Image")));
-            this.buttonHelp_NAN.Location = new System.Drawing.Point(1010, 7);
-            this.buttonHelp_NAN.Name = "buttonHelp_NAN";
-            this.buttonHelp_NAN.Size = new System.Drawing.Size(64, 64);
-            this.buttonHelp_NAN.TabIndex = 0;
-            this.buttonHelp_NAN.UseVisualStyleBackColor = true;
-            // 
             // buttonDiag_NAN
             // 
             this.buttonDiag_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDiag_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDiag_NAN.Location = new System.Drawing.Point(9, 10);
             this.buttonDiag_NAN.Name = "buttonDiag_NAN";
             this.buttonDiag_NAN.Size = new System.Drawing.Size(134, 57);
             this.buttonDiag_NAN.TabIndex = 1;
             this.buttonDiag_NAN.Text = "Посмотреть диаграмму";
             this.buttonDiag_NAN.UseVisualStyleBackColor = true;
+            // 
+            // buttonHelp_NAN
+            // 
+            this.buttonHelp_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonHelp_NAN.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_NAN.Image")));
+            this.buttonHelp_NAN.Location = new System.Drawing.Point(1010, 7);
+            this.buttonHelp_NAN.Name = "buttonHelp_NAN";
+            this.buttonHelp_NAN.Size = new System.Drawing.Size(64, 64);
+            this.buttonHelp_NAN.TabIndex = 0;
+            this.buttonHelp_NAN.UseVisualStyleBackColor = true;
             // 
             // panelLeft_NAN
             // 
@@ -119,7 +121,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.groupBoxAddPerson_NAN.Controls.Add(this.textBoxEntrance_NAN);
             this.groupBoxAddPerson_NAN.Controls.Add(this.labelEntrance_NAN);
             this.groupBoxAddPerson_NAN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxAddPerson_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBoxAddPerson_NAN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxAddPerson_NAN.Location = new System.Drawing.Point(5, 5);
             this.groupBoxAddPerson_NAN.Name = "groupBoxAddPerson_NAN";
             this.groupBoxAddPerson_NAN.Padding = new System.Windows.Forms.Padding(5);
@@ -128,123 +130,17 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.groupBoxAddPerson_NAN.TabStop = false;
             this.groupBoxAddPerson_NAN.Text = "Добавить нового пользователя:";
             // 
-            // labelEntrance_NAN
+            // buttonAddPerson_NAN
             // 
-            this.labelEntrance_NAN.AutoSize = true;
-            this.labelEntrance_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEntrance_NAN.Location = new System.Drawing.Point(6, 41);
-            this.labelEntrance_NAN.Name = "labelEntrance_NAN";
-            this.labelEntrance_NAN.Size = new System.Drawing.Size(123, 17);
-            this.labelEntrance_NAN.TabIndex = 0;
-            this.labelEntrance_NAN.Text = "Номер подъезда:";
-            // 
-            // textBoxEntrance_NAN
-            // 
-            this.textBoxEntrance_NAN.Location = new System.Drawing.Point(145, 36);
-            this.textBoxEntrance_NAN.Multiline = true;
-            this.textBoxEntrance_NAN.Name = "textBoxEntrance_NAN";
-            this.textBoxEntrance_NAN.Size = new System.Drawing.Size(73, 32);
-            this.textBoxEntrance_NAN.TabIndex = 1;
-            // 
-            // labelFlat_NAN
-            // 
-            this.labelFlat_NAN.AutoSize = true;
-            this.labelFlat_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFlat_NAN.Location = new System.Drawing.Point(6, 92);
-            this.labelFlat_NAN.Name = "labelFlat_NAN";
-            this.labelFlat_NAN.Size = new System.Drawing.Size(122, 17);
-            this.labelFlat_NAN.TabIndex = 2;
-            this.labelFlat_NAN.Text = "Номер квартиры:";
-            // 
-            // textBoxFlat_NAN
-            // 
-            this.textBoxFlat_NAN.Location = new System.Drawing.Point(144, 87);
-            this.textBoxFlat_NAN.Multiline = true;
-            this.textBoxFlat_NAN.Name = "textBoxFlat_NAN";
-            this.textBoxFlat_NAN.Size = new System.Drawing.Size(73, 32);
-            this.textBoxFlat_NAN.TabIndex = 3;
-            // 
-            // labelRooms_NAN
-            // 
-            this.labelRooms_NAN.AutoSize = true;
-            this.labelRooms_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRooms_NAN.Location = new System.Drawing.Point(6, 144);
-            this.labelRooms_NAN.Name = "labelRooms_NAN";
-            this.labelRooms_NAN.Size = new System.Drawing.Size(108, 17);
-            this.labelRooms_NAN.TabIndex = 4;
-            this.labelRooms_NAN.Text = "Кол-во комнат:";
-            // 
-            // textBoxRooms_NAN
-            // 
-            this.textBoxRooms_NAN.Location = new System.Drawing.Point(131, 139);
-            this.textBoxRooms_NAN.Multiline = true;
-            this.textBoxRooms_NAN.Name = "textBoxRooms_NAN";
-            this.textBoxRooms_NAN.Size = new System.Drawing.Size(73, 32);
-            this.textBoxRooms_NAN.TabIndex = 5;
-            // 
-            // labelSurname_NAN
-            // 
-            this.labelSurname_NAN.AutoSize = true;
-            this.labelSurname_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSurname_NAN.Location = new System.Drawing.Point(6, 195);
-            this.labelSurname_NAN.Name = "labelSurname_NAN";
-            this.labelSurname_NAN.Size = new System.Drawing.Size(206, 17);
-            this.labelSurname_NAN.TabIndex = 6;
-            this.labelSurname_NAN.Text = "Фамилия квартиросъёмщика:";
-            // 
-            // textBoxSurname_NAN
-            // 
-            this.textBoxSurname_NAN.Location = new System.Drawing.Point(231, 190);
-            this.textBoxSurname_NAN.Multiline = true;
-            this.textBoxSurname_NAN.Name = "textBoxSurname_NAN";
-            this.textBoxSurname_NAN.Size = new System.Drawing.Size(151, 32);
-            this.textBoxSurname_NAN.TabIndex = 7;
-            // 
-            // labelMembers_NAN
-            // 
-            this.labelMembers_NAN.AutoSize = true;
-            this.labelMembers_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMembers_NAN.Location = new System.Drawing.Point(6, 251);
-            this.labelMembers_NAN.Name = "labelMembers_NAN";
-            this.labelMembers_NAN.Size = new System.Drawing.Size(151, 17);
-            this.labelMembers_NAN.TabIndex = 8;
-            this.labelMembers_NAN.Text = "Кол-во членов семьи:";
-            // 
-            // textBoxMembers_NAN
-            // 
-            this.textBoxMembers_NAN.Location = new System.Drawing.Point(178, 246);
-            this.textBoxMembers_NAN.Multiline = true;
-            this.textBoxMembers_NAN.Name = "textBoxMembers_NAN";
-            this.textBoxMembers_NAN.Size = new System.Drawing.Size(73, 32);
-            this.textBoxMembers_NAN.TabIndex = 9;
-            // 
-            // labelKids_NAN
-            // 
-            this.labelKids_NAN.AutoSize = true;
-            this.labelKids_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelKids_NAN.Location = new System.Drawing.Point(6, 310);
-            this.labelKids_NAN.Name = "labelKids_NAN";
-            this.labelKids_NAN.Size = new System.Drawing.Size(154, 17);
-            this.labelKids_NAN.TabIndex = 10;
-            this.labelKids_NAN.Text = "Кол-во детей в семье:";
-            // 
-            // textBoxKids_NAN
-            // 
-            this.textBoxKids_NAN.Location = new System.Drawing.Point(180, 305);
-            this.textBoxKids_NAN.Multiline = true;
-            this.textBoxKids_NAN.Name = "textBoxKids_NAN";
-            this.textBoxKids_NAN.Size = new System.Drawing.Size(73, 32);
-            this.textBoxKids_NAN.TabIndex = 11;
-            // 
-            // labelArrears_NAN
-            // 
-            this.labelArrears_NAN.AutoSize = true;
-            this.labelArrears_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelArrears_NAN.Location = new System.Drawing.Point(6, 368);
-            this.labelArrears_NAN.Name = "labelArrears_NAN";
-            this.labelArrears_NAN.Size = new System.Drawing.Size(271, 17);
-            this.labelArrears_NAN.TabIndex = 12;
-            this.labelArrears_NAN.Text = "Есть ли задолженность по квартплате?";
+            this.buttonAddPerson_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddPerson_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddPerson_NAN.Location = new System.Drawing.Point(282, 410);
+            this.buttonAddPerson_NAN.Name = "buttonAddPerson_NAN";
+            this.buttonAddPerson_NAN.Size = new System.Drawing.Size(138, 50);
+            this.buttonAddPerson_NAN.TabIndex = 14;
+            this.buttonAddPerson_NAN.Text = "Добавить пользователя";
+            this.buttonAddPerson_NAN.UseVisualStyleBackColor = true;
+            this.buttonAddPerson_NAN.Click += new System.EventHandler(this.buttonAddPerson_NAN_Click);
             // 
             // textBoxArrears_NAN
             // 
@@ -254,17 +150,123 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.textBoxArrears_NAN.Size = new System.Drawing.Size(73, 32);
             this.textBoxArrears_NAN.TabIndex = 13;
             // 
-            // buttonAddPerson_NAN
+            // labelArrears_NAN
             // 
-            this.buttonAddPerson_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddPerson_NAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddPerson_NAN.Location = new System.Drawing.Point(282, 410);
-            this.buttonAddPerson_NAN.Name = "buttonAddPerson_NAN";
-            this.buttonAddPerson_NAN.Size = new System.Drawing.Size(138, 50);
-            this.buttonAddPerson_NAN.TabIndex = 14;
-            this.buttonAddPerson_NAN.Text = "Добавить пользователя";
-            this.buttonAddPerson_NAN.UseVisualStyleBackColor = true;
-            this.buttonAddPerson_NAN.Click += new System.EventHandler(this.buttonAddPerson_NAN_Click);
+            this.labelArrears_NAN.AutoSize = true;
+            this.labelArrears_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelArrears_NAN.Location = new System.Drawing.Point(6, 361);
+            this.labelArrears_NAN.Name = "labelArrears_NAN";
+            this.labelArrears_NAN.Size = new System.Drawing.Size(254, 38);
+            this.labelArrears_NAN.TabIndex = 12;
+            this.labelArrears_NAN.Text = "Есть ли задолженность по квартплате?\r\n(да/нет)";
+            // 
+            // textBoxKids_NAN
+            // 
+            this.textBoxKids_NAN.Location = new System.Drawing.Point(180, 305);
+            this.textBoxKids_NAN.Multiline = true;
+            this.textBoxKids_NAN.Name = "textBoxKids_NAN";
+            this.textBoxKids_NAN.Size = new System.Drawing.Size(73, 32);
+            this.textBoxKids_NAN.TabIndex = 11;
+            // 
+            // labelKids_NAN
+            // 
+            this.labelKids_NAN.AutoSize = true;
+            this.labelKids_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelKids_NAN.Location = new System.Drawing.Point(6, 310);
+            this.labelKids_NAN.Name = "labelKids_NAN";
+            this.labelKids_NAN.Size = new System.Drawing.Size(148, 19);
+            this.labelKids_NAN.TabIndex = 10;
+            this.labelKids_NAN.Text = "Кол-во детей в семье:";
+            // 
+            // textBoxMembers_NAN
+            // 
+            this.textBoxMembers_NAN.Location = new System.Drawing.Point(178, 246);
+            this.textBoxMembers_NAN.Multiline = true;
+            this.textBoxMembers_NAN.Name = "textBoxMembers_NAN";
+            this.textBoxMembers_NAN.Size = new System.Drawing.Size(73, 32);
+            this.textBoxMembers_NAN.TabIndex = 9;
+            // 
+            // labelMembers_NAN
+            // 
+            this.labelMembers_NAN.AutoSize = true;
+            this.labelMembers_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMembers_NAN.Location = new System.Drawing.Point(6, 251);
+            this.labelMembers_NAN.Name = "labelMembers_NAN";
+            this.labelMembers_NAN.Size = new System.Drawing.Size(147, 19);
+            this.labelMembers_NAN.TabIndex = 8;
+            this.labelMembers_NAN.Text = "Кол-во членов семьи:";
+            // 
+            // textBoxSurname_NAN
+            // 
+            this.textBoxSurname_NAN.Location = new System.Drawing.Point(231, 190);
+            this.textBoxSurname_NAN.Multiline = true;
+            this.textBoxSurname_NAN.Name = "textBoxSurname_NAN";
+            this.textBoxSurname_NAN.Size = new System.Drawing.Size(151, 32);
+            this.textBoxSurname_NAN.TabIndex = 7;
+            // 
+            // labelSurname_NAN
+            // 
+            this.labelSurname_NAN.AutoSize = true;
+            this.labelSurname_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSurname_NAN.Location = new System.Drawing.Point(6, 195);
+            this.labelSurname_NAN.Name = "labelSurname_NAN";
+            this.labelSurname_NAN.Size = new System.Drawing.Size(197, 19);
+            this.labelSurname_NAN.TabIndex = 6;
+            this.labelSurname_NAN.Text = "Фамилия квартиросъёмщика:";
+            // 
+            // textBoxRooms_NAN
+            // 
+            this.textBoxRooms_NAN.Location = new System.Drawing.Point(131, 139);
+            this.textBoxRooms_NAN.Multiline = true;
+            this.textBoxRooms_NAN.Name = "textBoxRooms_NAN";
+            this.textBoxRooms_NAN.Size = new System.Drawing.Size(73, 32);
+            this.textBoxRooms_NAN.TabIndex = 5;
+            // 
+            // labelRooms_NAN
+            // 
+            this.labelRooms_NAN.AutoSize = true;
+            this.labelRooms_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRooms_NAN.Location = new System.Drawing.Point(6, 144);
+            this.labelRooms_NAN.Name = "labelRooms_NAN";
+            this.labelRooms_NAN.Size = new System.Drawing.Size(106, 19);
+            this.labelRooms_NAN.TabIndex = 4;
+            this.labelRooms_NAN.Text = "Кол-во комнат:";
+            // 
+            // textBoxFlat_NAN
+            // 
+            this.textBoxFlat_NAN.Location = new System.Drawing.Point(144, 87);
+            this.textBoxFlat_NAN.Multiline = true;
+            this.textBoxFlat_NAN.Name = "textBoxFlat_NAN";
+            this.textBoxFlat_NAN.Size = new System.Drawing.Size(73, 32);
+            this.textBoxFlat_NAN.TabIndex = 3;
+            // 
+            // labelFlat_NAN
+            // 
+            this.labelFlat_NAN.AutoSize = true;
+            this.labelFlat_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFlat_NAN.Location = new System.Drawing.Point(6, 92);
+            this.labelFlat_NAN.Name = "labelFlat_NAN";
+            this.labelFlat_NAN.Size = new System.Drawing.Size(120, 19);
+            this.labelFlat_NAN.TabIndex = 2;
+            this.labelFlat_NAN.Text = "Номер квартиры:";
+            // 
+            // textBoxEntrance_NAN
+            // 
+            this.textBoxEntrance_NAN.Location = new System.Drawing.Point(145, 36);
+            this.textBoxEntrance_NAN.Multiline = true;
+            this.textBoxEntrance_NAN.Name = "textBoxEntrance_NAN";
+            this.textBoxEntrance_NAN.Size = new System.Drawing.Size(73, 32);
+            this.textBoxEntrance_NAN.TabIndex = 1;
+            // 
+            // labelEntrance_NAN
+            // 
+            this.labelEntrance_NAN.AutoSize = true;
+            this.labelEntrance_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEntrance_NAN.Location = new System.Drawing.Point(6, 41);
+            this.labelEntrance_NAN.Name = "labelEntrance_NAN";
+            this.labelEntrance_NAN.Size = new System.Drawing.Size(119, 19);
+            this.labelEntrance_NAN.TabIndex = 0;
+            this.labelEntrance_NAN.Text = "Номер подъезда:";
             // 
             // panelRight_NAN
             // 

@@ -20,6 +20,28 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         }
 
         DataService ds = new DataService();
+
+        public static int[,] LoadFromFileData(string filePath)
+        {
+            string fileData = File.ReadAllText(filePath);
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            int rows = lines.Length;
+            int columns = 7;
+            int[,] arrayValues = new int[rows, columns];
+
+            for (int r = 0; r < rows; r++)
+            {
+                string[] line_r = lines[r].Split(';');
+                for (int c = 0; c < columns; c++)
+                {
+                    arrayValues[r, c] = Convert.ToInt32(line_r[c]);
+                }
+            }
+            return arrayValues;
+        }
+
         private void buttonAddPerson_NAN_Click(object sender, EventArgs e)
         {
             try
