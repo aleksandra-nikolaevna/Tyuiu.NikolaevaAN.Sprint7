@@ -29,6 +29,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelTop_NAN = new System.Windows.Forms.Panel();
             this.buttonDiag_NAN = new System.Windows.Forms.Button();
@@ -52,6 +53,9 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.labelEntrance_NAN = new System.Windows.Forms.Label();
             this.panelRight_NAN = new System.Windows.Forms.Panel();
             this.dataGridViewMatrix_NAN = new System.Windows.Forms.DataGridView();
+            this.openFileDialog_NAN = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog_NAN = new System.Windows.Forms.SaveFileDialog();
+            this.toolTip_NAN = new System.Windows.Forms.ToolTip(this.components);
             this.panelTop_NAN.SuspendLayout();
             this.panelLeft_NAN.SuspendLayout();
             this.groupBoxAddPerson_NAN.SuspendLayout();
@@ -290,6 +294,10 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.dataGridViewMatrix_NAN.Size = new System.Drawing.Size(636, 465);
             this.dataGridViewMatrix_NAN.TabIndex = 0;
             // 
+            // openFileDialog_NAN
+            // 
+            this.openFileDialog_NAN.FileName = "openFileDialog1";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -303,6 +311,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Спринт 7 | Project Task | Вариант 7 | Николаева А. Н.";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelTop_NAN.ResumeLayout(false);
             this.panelLeft_NAN.ResumeLayout(false);
             this.groupBoxAddPerson_NAN.ResumeLayout(false);
@@ -337,6 +346,9 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         private System.Windows.Forms.Button buttonAddPerson_NAN;
         private System.Windows.Forms.Panel panelRight_NAN;
         private System.Windows.Forms.DataGridView dataGridViewMatrix_NAN;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_NAN;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog_NAN;
+        private System.Windows.Forms.ToolTip toolTip_NAN;
     }
 }
 

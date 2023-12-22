@@ -17,26 +17,31 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         public FormMain()
         {
             InitializeComponent();
+            openFileDialog_NAN.Filter = "Значения, разделённые запятыми(*.csv)|*.csv|Все файлы(*.*)|*.*";
+            saveFileDialog_NAN.Filter = "Значения, разделённые запятыми(*.csv)|*.csv|Все файлы(*.*)|*.*";
         }
 
         DataService ds = new DataService();
+        static int rows = 3;
+        static int columns = 7;
+        static string openFilePath = @"C:\DataSprint7\InPutFileProjectV7.csv";
 
-        public static int[,] LoadFromFileData(string filePath)
+        public static string[,] LoadFromFileData(string filePath)
         {
-            string fileData = File.ReadAllText(filePath);
+            string fileData = File.ReadAllText(filePath, Encoding.Default);
             fileData = fileData.Replace('\n', '\r');
             string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
             int rows = lines.Length;
-            int columns = 7;
-            int[,] arrayValues = new int[rows, columns];
+            int columns = lines[0].Split(';').Length;
+            string[,] arrayValues = new string[rows, columns];
 
             for (int r = 0; r < rows; r++)
             {
                 string[] line_r = lines[r].Split(';');
                 for (int c = 0; c < columns; c++)
                 {
-                    arrayValues[r, c] = Convert.ToInt32(line_r[c]);
+                    arrayValues[r, c] = Convert.ToString(line_r[c]);
                 }
             }
             return arrayValues;
@@ -54,37 +59,73 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
                 int kids = Convert.ToInt32(textBoxKids_NAN.Text);
                 string arrears = Convert.ToString(textBoxArrears_NAN.Text);
 
-                dataGridViewMatrix_NAN.ColumnCount = 7;
-                dataGridViewMatrix_NAN.Columns[0].HeaderText = "Номер подъезда";
-                dataGridViewMatrix_NAN.Columns[0].Width = 75;
-                dataGridViewMatrix_NAN.Columns[1].HeaderText = "Номер квартиры";
-                dataGridViewMatrix_NAN.Columns[1].Width = 75;
-                dataGridViewMatrix_NAN.Columns[2].HeaderText = "Кол-во комнат";
-                dataGridViewMatrix_NAN.Columns[2].Width = 75;
-                dataGridViewMatrix_NAN.Columns[3].HeaderText = "Фамилия квартиросъёмщика";
-                dataGridViewMatrix_NAN.Columns[3].Width = 125;
-                dataGridViewMatrix_NAN.Columns[4].HeaderText = "Кол-во членов семьи";
-                dataGridViewMatrix_NAN.Columns[4].Width = 100;
-                dataGridViewMatrix_NAN.Columns[5].HeaderText = "Кол-во детей в семье";
-                dataGridViewMatrix_NAN.Columns[5].Width = 100;
-                dataGridViewMatrix_NAN.Columns[6].HeaderText = "Есть ли задолженность по квартплате";
-                dataGridViewMatrix_NAN.Columns[6].Width = 165;
-                /*dataGridViewMatrix_NAN.RowCount = rows;
-                for (int i = 0; i < columns; i++)
+                //вывод в таблицу
+                this.dataGridViewMatrix_NAN.Rows.Add(entrance, flat, rooms, surname, members, kids, arrears);
+
+                //сохранение в файл
+                saveFileDialog_NAN.FileName = @"C:\DataSprint7\NewPersons.csv";
+                string path = saveFileDialog_NAN.FileName;
+                FileInfo fileInfo = new FileInfo(path);
+                bool fileExists = fileInfo.Exists;
+                if (fileExists)
                 {
-                    dataGridViewMatrix_NAN.Columns[i].Width = 30;
+                    File.Delete(path);
                 }
-                for (int i = 0; i < rows; i++)
+
+                int row = dataGridViewMatrix_NAN.RowCount;
+                int column = dataGridViewMatrix_NAN.ColumnCount;
+                string str = "";
+                for (int i = 0; i < row; i++)
                 {
-                    for (int j = 0; j < columns; j++)
+                    for (int j = 0; j < column; j++)
                     {
-                        dataGridViewMatrix_NAN.Rows[i].Cells[j].Value = Convert.ToString(array[i, j]);
+                        if (j != columns - 1)
+                        {
+                            str = str + dataGridViewMatrix_NAN.Rows[i].Cells[j].Value + ";";
+                        }
+                        else
+                        {
+                            str = str + dataGridViewMatrix_NAN.Rows[i].Cells[j].Value;
+                        }
                     }
-                }*/
+                    File.AppendAllText(path, str + Environment.NewLine);
+                    str = "";
+                }
             }
             catch
             {
                 MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            dataGridViewMatrix_NAN.ColumnCount = columns;
+            dataGridViewMatrix_NAN.Columns[0].HeaderText = "Номер подъезда";
+            dataGridViewMatrix_NAN.Columns[0].Width = 75;
+            dataGridViewMatrix_NAN.Columns[1].HeaderText = "Номер квартиры";
+            dataGridViewMatrix_NAN.Columns[1].Width = 75;
+            dataGridViewMatrix_NAN.Columns[2].HeaderText = "Кол-во комнат";
+            dataGridViewMatrix_NAN.Columns[2].Width = 75;
+            dataGridViewMatrix_NAN.Columns[3].HeaderText = "Фамилия квартиросъёмщика";
+            dataGridViewMatrix_NAN.Columns[3].Width = 125;
+            dataGridViewMatrix_NAN.Columns[4].HeaderText = "Кол-во членов семьи";
+            dataGridViewMatrix_NAN.Columns[4].Width = 100;
+            dataGridViewMatrix_NAN.Columns[5].HeaderText = "Кол-во детей в семье";
+            dataGridViewMatrix_NAN.Columns[5].Width = 100;
+            dataGridViewMatrix_NAN.Columns[6].HeaderText = "Есть ли задолженность по квартплате";
+            dataGridViewMatrix_NAN.Columns[6].Width = 165;
+            dataGridViewMatrix_NAN.RowCount = rows;
+
+            string[,] arrayValues = new string[rows, columns];
+            arrayValues = LoadFromFileData(openFilePath);
+
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < columns; c++)
+                {
+                    dataGridViewMatrix_NAN.Rows[r].Cells[c].Value = arrayValues[r, c];
+                }
             }
         }
     }
