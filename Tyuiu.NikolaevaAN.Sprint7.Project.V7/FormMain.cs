@@ -76,7 +76,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
                 int row = dataGridViewMatrix_NAN.RowCount;
                 int column = dataGridViewMatrix_NAN.ColumnCount;
                 string str = "";
-                for (int i = 0; i < row; i++)
+                for (int i = 0; i < (row - 1); i++)
                 {
                     for (int j = 0; j < column; j++)
                     {

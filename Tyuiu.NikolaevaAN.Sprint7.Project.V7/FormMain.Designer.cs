@@ -76,8 +76,8 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelTop_NAN.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_NAN.Location = new System.Drawing.Point(0, 0);
             this.panelTop_NAN.Name = "panelTop_NAN";
-            this.panelTop_NAN.Padding = new System.Windows.Forms.Padding(5);
-            this.panelTop_NAN.Size = new System.Drawing.Size(1132, 78);
+            this.panelTop_NAN.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelTop_NAN.Size = new System.Drawing.Size(1131, 78);
             this.panelTop_NAN.TabIndex = 0;
             // 
             // groupBoxSort_NAN
@@ -86,7 +86,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.groupBoxSort_NAN.Controls.Add(this.labelSort_NAN);
             this.groupBoxSort_NAN.Controls.Add(this.textBoxSort_NAN);
             this.groupBoxSort_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBoxSort_NAN.Location = new System.Drawing.Point(436, 7);
+            this.groupBoxSort_NAN.Location = new System.Drawing.Point(437, 7);
             this.groupBoxSort_NAN.Name = "groupBoxSort_NAN";
             this.groupBoxSort_NAN.Size = new System.Drawing.Size(568, 60);
             this.groupBoxSort_NAN.TabIndex = 2;
@@ -142,7 +142,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.buttonHelp_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonHelp_NAN.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_NAN.Image")));
-            this.buttonHelp_NAN.Location = new System.Drawing.Point(1060, 7);
+            this.buttonHelp_NAN.Location = new System.Drawing.Point(1061, 7);
             this.buttonHelp_NAN.Name = "buttonHelp_NAN";
             this.buttonHelp_NAN.Size = new System.Drawing.Size(64, 64);
             this.buttonHelp_NAN.TabIndex = 0;
@@ -155,8 +155,8 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelLeft_NAN.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft_NAN.Location = new System.Drawing.Point(0, 78);
             this.panelLeft_NAN.Name = "panelLeft_NAN";
-            this.panelLeft_NAN.Padding = new System.Windows.Forms.Padding(5);
-            this.panelLeft_NAN.Size = new System.Drawing.Size(436, 475);
+            this.panelLeft_NAN.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelLeft_NAN.Size = new System.Drawing.Size(437, 475);
             this.panelLeft_NAN.TabIndex = 1;
             // 
             // groupBoxAddPerson_NAN
@@ -180,8 +180,8 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.groupBoxAddPerson_NAN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxAddPerson_NAN.Location = new System.Drawing.Point(5, 5);
             this.groupBoxAddPerson_NAN.Name = "groupBoxAddPerson_NAN";
-            this.groupBoxAddPerson_NAN.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBoxAddPerson_NAN.Size = new System.Drawing.Size(426, 465);
+            this.groupBoxAddPerson_NAN.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxAddPerson_NAN.Size = new System.Drawing.Size(427, 465);
             this.groupBoxAddPerson_NAN.TabIndex = 0;
             this.groupBoxAddPerson_NAN.TabStop = false;
             this.groupBoxAddPerson_NAN.Text = "Добавить нового пользователя:";
@@ -219,7 +219,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // textBoxKids_NAN
             // 
-            this.textBoxKids_NAN.Location = new System.Drawing.Point(180, 305);
+            this.textBoxKids_NAN.Location = new System.Drawing.Point(181, 305);
             this.textBoxKids_NAN.Multiline = true;
             this.textBoxKids_NAN.Name = "textBoxKids_NAN";
             this.textBoxKids_NAN.Size = new System.Drawing.Size(73, 32);
@@ -329,10 +329,10 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             this.panelRight_NAN.Controls.Add(this.dataGridViewMatrix_NAN);
             this.panelRight_NAN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRight_NAN.Location = new System.Drawing.Point(436, 78);
+            this.panelRight_NAN.Location = new System.Drawing.Point(437, 78);
             this.panelRight_NAN.Name = "panelRight_NAN";
-            this.panelRight_NAN.Padding = new System.Windows.Forms.Padding(5);
-            this.panelRight_NAN.Size = new System.Drawing.Size(696, 475);
+            this.panelRight_NAN.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelRight_NAN.Size = new System.Drawing.Size(694, 475);
             this.panelRight_NAN.TabIndex = 2;
             // 
             // dataGridViewMatrix_NAN
@@ -345,7 +345,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.dataGridViewMatrix_NAN.RowHeadersVisible = false;
             this.dataGridViewMatrix_NAN.RowHeadersWidth = 51;
             this.dataGridViewMatrix_NAN.RowTemplate.Height = 24;
-            this.dataGridViewMatrix_NAN.Size = new System.Drawing.Size(686, 465);
+            this.dataGridViewMatrix_NAN.Size = new System.Drawing.Size(684, 465);
             this.dataGridViewMatrix_NAN.TabIndex = 0;
             // 
             // openFileDialog_NAN
@@ -356,11 +356,11 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 553);
+            this.ClientSize = new System.Drawing.Size(1131, 553);
             this.Controls.Add(this.panelRight_NAN);
             this.Controls.Add(this.panelLeft_NAN);
             this.Controls.Add(this.panelTop_NAN);
-            this.MinimumSize = new System.Drawing.Size(1150, 600);
+            this.MinimumSize = new System.Drawing.Size(1149, 600);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Спринт 7 | Project Task | Вариант 7 | Николаева А. Н.";

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
 {
@@ -15,6 +16,11 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         public FormAbout()
         {
             InitializeComponent();
+        }
+
+        private void buttonOk_NAN_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
