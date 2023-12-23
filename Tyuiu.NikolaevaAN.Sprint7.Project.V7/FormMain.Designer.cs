@@ -32,6 +32,10 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelTop_NAN = new System.Windows.Forms.Panel();
+            this.groupBoxSort_NAN = new System.Windows.Forms.GroupBox();
+            this.buttonSort_NAN = new System.Windows.Forms.Button();
+            this.labelSort_NAN = new System.Windows.Forms.Label();
+            this.textBoxSort_NAN = new System.Windows.Forms.TextBox();
             this.buttonDiag_NAN = new System.Windows.Forms.Button();
             this.buttonHelp_NAN = new System.Windows.Forms.Button();
             this.panelLeft_NAN = new System.Windows.Forms.Panel();
@@ -57,6 +61,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.saveFileDialog_NAN = new System.Windows.Forms.SaveFileDialog();
             this.toolTip_NAN = new System.Windows.Forms.ToolTip(this.components);
             this.panelTop_NAN.SuspendLayout();
+            this.groupBoxSort_NAN.SuspendLayout();
             this.panelLeft_NAN.SuspendLayout();
             this.groupBoxAddPerson_NAN.SuspendLayout();
             this.panelRight_NAN.SuspendLayout();
@@ -65,14 +70,59 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // panelTop_NAN
             // 
+            this.panelTop_NAN.Controls.Add(this.groupBoxSort_NAN);
             this.panelTop_NAN.Controls.Add(this.buttonDiag_NAN);
             this.panelTop_NAN.Controls.Add(this.buttonHelp_NAN);
             this.panelTop_NAN.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_NAN.Location = new System.Drawing.Point(0, 0);
             this.panelTop_NAN.Name = "panelTop_NAN";
             this.panelTop_NAN.Padding = new System.Windows.Forms.Padding(5);
-            this.panelTop_NAN.Size = new System.Drawing.Size(1082, 78);
+            this.panelTop_NAN.Size = new System.Drawing.Size(1132, 78);
             this.panelTop_NAN.TabIndex = 0;
+            // 
+            // groupBoxSort_NAN
+            // 
+            this.groupBoxSort_NAN.Controls.Add(this.buttonSort_NAN);
+            this.groupBoxSort_NAN.Controls.Add(this.labelSort_NAN);
+            this.groupBoxSort_NAN.Controls.Add(this.textBoxSort_NAN);
+            this.groupBoxSort_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBoxSort_NAN.Location = new System.Drawing.Point(436, 7);
+            this.groupBoxSort_NAN.Name = "groupBoxSort_NAN";
+            this.groupBoxSort_NAN.Size = new System.Drawing.Size(568, 60);
+            this.groupBoxSort_NAN.TabIndex = 2;
+            this.groupBoxSort_NAN.TabStop = false;
+            this.groupBoxSort_NAN.Text = "Сортировка:";
+            // 
+            // buttonSort_NAN
+            // 
+            this.buttonSort_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSort_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSort_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSort_NAN.Location = new System.Drawing.Point(432, 14);
+            this.buttonSort_NAN.Name = "buttonSort_NAN";
+            this.buttonSort_NAN.Size = new System.Drawing.Size(130, 38);
+            this.buttonSort_NAN.TabIndex = 2;
+            this.buttonSort_NAN.Text = "Сортировать";
+            this.buttonSort_NAN.UseVisualStyleBackColor = true;
+            this.buttonSort_NAN.Click += new System.EventHandler(this.buttonSort_NAN_Click);
+            // 
+            // labelSort_NAN
+            // 
+            this.labelSort_NAN.AutoSize = true;
+            this.labelSort_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSort_NAN.Location = new System.Drawing.Point(6, 24);
+            this.labelSort_NAN.Name = "labelSort_NAN";
+            this.labelSort_NAN.Size = new System.Drawing.Size(295, 19);
+            this.labelSort_NAN.TabIndex = 0;
+            this.labelSort_NAN.Text = "Сортировать по номеру столбца (отсчёт с 0):";
+            // 
+            // textBoxSort_NAN
+            // 
+            this.textBoxSort_NAN.Location = new System.Drawing.Point(335, 21);
+            this.textBoxSort_NAN.Multiline = true;
+            this.textBoxSort_NAN.Name = "textBoxSort_NAN";
+            this.textBoxSort_NAN.Size = new System.Drawing.Size(50, 25);
+            this.textBoxSort_NAN.TabIndex = 1;
             // 
             // buttonDiag_NAN
             // 
@@ -84,6 +134,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.buttonDiag_NAN.TabIndex = 1;
             this.buttonDiag_NAN.Text = "Посмотреть диаграмму";
             this.buttonDiag_NAN.UseVisualStyleBackColor = true;
+            this.buttonDiag_NAN.Click += new System.EventHandler(this.buttonDiag_NAN_Click);
             // 
             // buttonHelp_NAN
             // 
@@ -91,11 +142,12 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.buttonHelp_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonHelp_NAN.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_NAN.Image")));
-            this.buttonHelp_NAN.Location = new System.Drawing.Point(1010, 7);
+            this.buttonHelp_NAN.Location = new System.Drawing.Point(1060, 7);
             this.buttonHelp_NAN.Name = "buttonHelp_NAN";
             this.buttonHelp_NAN.Size = new System.Drawing.Size(64, 64);
             this.buttonHelp_NAN.TabIndex = 0;
             this.buttonHelp_NAN.UseVisualStyleBackColor = true;
+            this.buttonHelp_NAN.Click += new System.EventHandler(this.buttonHelp_NAN_Click);
             // 
             // panelLeft_NAN
             // 
@@ -136,9 +188,10 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // buttonAddPerson_NAN
             // 
+            this.buttonAddPerson_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddPerson_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddPerson_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddPerson_NAN.Location = new System.Drawing.Point(282, 410);
+            this.buttonAddPerson_NAN.Location = new System.Drawing.Point(285, 411);
             this.buttonAddPerson_NAN.Name = "buttonAddPerson_NAN";
             this.buttonAddPerson_NAN.Size = new System.Drawing.Size(138, 50);
             this.buttonAddPerson_NAN.TabIndex = 14;
@@ -279,11 +332,12 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelRight_NAN.Location = new System.Drawing.Point(436, 78);
             this.panelRight_NAN.Name = "panelRight_NAN";
             this.panelRight_NAN.Padding = new System.Windows.Forms.Padding(5);
-            this.panelRight_NAN.Size = new System.Drawing.Size(646, 475);
+            this.panelRight_NAN.Size = new System.Drawing.Size(696, 475);
             this.panelRight_NAN.TabIndex = 2;
             // 
             // dataGridViewMatrix_NAN
             // 
+            this.dataGridViewMatrix_NAN.AllowUserToOrderColumns = true;
             this.dataGridViewMatrix_NAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMatrix_NAN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewMatrix_NAN.Location = new System.Drawing.Point(5, 5);
@@ -291,7 +345,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.dataGridViewMatrix_NAN.RowHeadersVisible = false;
             this.dataGridViewMatrix_NAN.RowHeadersWidth = 51;
             this.dataGridViewMatrix_NAN.RowTemplate.Height = 24;
-            this.dataGridViewMatrix_NAN.Size = new System.Drawing.Size(636, 465);
+            this.dataGridViewMatrix_NAN.Size = new System.Drawing.Size(686, 465);
             this.dataGridViewMatrix_NAN.TabIndex = 0;
             // 
             // openFileDialog_NAN
@@ -302,17 +356,18 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 553);
+            this.ClientSize = new System.Drawing.Size(1132, 553);
             this.Controls.Add(this.panelRight_NAN);
             this.Controls.Add(this.panelLeft_NAN);
             this.Controls.Add(this.panelTop_NAN);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MinimumSize = new System.Drawing.Size(1100, 600);
+            this.MinimumSize = new System.Drawing.Size(1150, 600);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Спринт 7 | Project Task | Вариант 7 | Николаева А. Н.";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelTop_NAN.ResumeLayout(false);
+            this.groupBoxSort_NAN.ResumeLayout(false);
+            this.groupBoxSort_NAN.PerformLayout();
             this.panelLeft_NAN.ResumeLayout(false);
             this.groupBoxAddPerson_NAN.ResumeLayout(false);
             this.groupBoxAddPerson_NAN.PerformLayout();
@@ -349,6 +404,10 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         private System.Windows.Forms.OpenFileDialog openFileDialog_NAN;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_NAN;
         private System.Windows.Forms.ToolTip toolTip_NAN;
+        private System.Windows.Forms.TextBox textBoxSort_NAN;
+        private System.Windows.Forms.Label labelSort_NAN;
+        private System.Windows.Forms.Button buttonSort_NAN;
+        private System.Windows.Forms.GroupBox groupBoxSort_NAN;
     }
 }
 

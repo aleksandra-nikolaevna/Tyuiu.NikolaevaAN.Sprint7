@@ -22,7 +22,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         }
 
         DataService ds = new DataService();
-        static int rows = 3;
+        static int rows = 4;
         static int columns = 7;
         static string openFilePath = @"C:\DataSprint7\InPutFileProjectV7.csv";
 
@@ -51,16 +51,17 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         {
             try
             {
-                int entrance = Convert.ToInt32(textBoxEntrance_NAN.Text);
-                int flat = Convert.ToInt32(textBoxFlat_NAN.Text);
-                int rooms = Convert.ToInt32(textBoxRooms_NAN.Text);
+                string entrance = Convert.ToString(textBoxEntrance_NAN.Text);
+                string flat = Convert.ToString(textBoxFlat_NAN.Text);
+                string rooms = Convert.ToString(textBoxRooms_NAN.Text);
                 string surname = Convert.ToString(textBoxSurname_NAN.Text);
-                int members = Convert.ToInt32(textBoxMembers_NAN.Text);
-                int kids = Convert.ToInt32(textBoxKids_NAN.Text);
+                string members = Convert.ToString(textBoxMembers_NAN.Text);
+                string kids = Convert.ToString(textBoxKids_NAN.Text);
                 string arrears = Convert.ToString(textBoxArrears_NAN.Text);
 
                 //вывод в таблицу
                 this.dataGridViewMatrix_NAN.Rows.Add(entrance, flat, rooms, surname, members, kids, arrears);
+                rows += 1;
 
                 //сохранение в файл
                 saveFileDialog_NAN.FileName = @"C:\DataSprint7\NewPersons.csv";
@@ -117,16 +118,35 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             dataGridViewMatrix_NAN.Columns[6].Width = 165;
             dataGridViewMatrix_NAN.RowCount = rows;
 
+            //добавление в таблицу
             string[,] arrayValues = new string[rows, columns];
             arrayValues = LoadFromFileData(openFilePath);
 
-            for (int r = 0; r < rows; r++)
+            for (int r = 0; r < rows-1; r++)
             {
                 for (int c = 0; c < columns; c++)
                 {
                     dataGridViewMatrix_NAN.Rows[r].Cells[c].Value = arrayValues[r, c];
                 }
             }
+        }
+
+        private void buttonSort_NAN_Click(object sender, EventArgs e)
+        {
+            int numSort = Convert.ToInt32(textBoxSort_NAN.Text);
+            dataGridViewMatrix_NAN.Sort(dataGridViewMatrix_NAN.Columns[numSort], ListSortDirection.Ascending);
+        }
+
+        private void buttonHelp_NAN_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
+
+        private void buttonDiag_NAN_Click(object sender, EventArgs e)
+        {
+            FormDiag formDiag = new FormDiag();
+            formDiag.ShowDialog();
         }
     }
 }
