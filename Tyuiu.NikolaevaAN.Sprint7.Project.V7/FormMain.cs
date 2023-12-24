@@ -148,5 +148,11 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             FormDiag formDiag = new FormDiag();
             formDiag.ShowDialog();
         }
+
+        private void buttonStat_NAN_Click(object sender, EventArgs e)
+        {
+            FormStatistics formStatistics = new FormStatistics();
+            formStatistics.ShowDialog();
+        }
     }
 }

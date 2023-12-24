@@ -60,6 +60,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.openFileDialog_NAN = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_NAN = new System.Windows.Forms.SaveFileDialog();
             this.toolTip_NAN = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonStat_NAN = new System.Windows.Forms.Button();
             this.panelTop_NAN.SuspendLayout();
             this.groupBoxSort_NAN.SuspendLayout();
             this.panelLeft_NAN.SuspendLayout();
@@ -70,6 +71,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // panelTop_NAN
             // 
+            this.panelTop_NAN.Controls.Add(this.buttonStat_NAN);
             this.panelTop_NAN.Controls.Add(this.groupBoxSort_NAN);
             this.panelTop_NAN.Controls.Add(this.buttonDiag_NAN);
             this.panelTop_NAN.Controls.Add(this.buttonHelp_NAN);
@@ -348,6 +350,17 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             this.openFileDialog_NAN.FileName = "openFileDialog1";
             // 
+            // buttonStat_NAN
+            // 
+            this.buttonStat_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonStat_NAN.Location = new System.Drawing.Point(150, 10);
+            this.buttonStat_NAN.Name = "buttonStat_NAN";
+            this.buttonStat_NAN.Size = new System.Drawing.Size(109, 57);
+            this.buttonStat_NAN.TabIndex = 3;
+            this.buttonStat_NAN.Text = "Статистика";
+            this.buttonStat_NAN.UseVisualStyleBackColor = true;
+            this.buttonStat_NAN.Click += new System.EventHandler(this.buttonStat_NAN_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -404,6 +417,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         private System.Windows.Forms.Label labelSort_NAN;
         private System.Windows.Forms.Button buttonSort_NAN;
         private System.Windows.Forms.GroupBox groupBoxSort_NAN;
+        private System.Windows.Forms.Button buttonStat_NAN;
     }
 }
 
