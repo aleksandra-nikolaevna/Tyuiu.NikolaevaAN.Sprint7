@@ -9,8 +9,13 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CheckedExistsFile()
         {
+            string path = @"C:\DataSprint7\InPutFileProjectV7.csv";
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
         }
     }
 }
