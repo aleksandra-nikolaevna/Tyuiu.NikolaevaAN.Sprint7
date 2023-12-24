@@ -79,7 +79,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelTop_NAN.Location = new System.Drawing.Point(0, 0);
             this.panelTop_NAN.Name = "panelTop_NAN";
             this.panelTop_NAN.Padding = new System.Windows.Forms.Padding(5);
-            this.panelTop_NAN.Size = new System.Drawing.Size(1131, 78);
+            this.panelTop_NAN.Size = new System.Drawing.Size(1382, 78);
             this.panelTop_NAN.TabIndex = 0;
             // 
             // groupBoxSort_NAN
@@ -141,7 +141,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.buttonHelp_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonHelp_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonHelp_NAN.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_NAN.Image")));
-            this.buttonHelp_NAN.Location = new System.Drawing.Point(1061, 7);
+            this.buttonHelp_NAN.Location = new System.Drawing.Point(1312, 7);
             this.buttonHelp_NAN.Name = "buttonHelp_NAN";
             this.buttonHelp_NAN.Size = new System.Drawing.Size(64, 64);
             this.buttonHelp_NAN.TabIndex = 0;
@@ -330,7 +330,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelRight_NAN.Location = new System.Drawing.Point(437, 78);
             this.panelRight_NAN.Name = "panelRight_NAN";
             this.panelRight_NAN.Padding = new System.Windows.Forms.Padding(5);
-            this.panelRight_NAN.Size = new System.Drawing.Size(694, 475);
+            this.panelRight_NAN.Size = new System.Drawing.Size(945, 475);
             this.panelRight_NAN.TabIndex = 2;
             // 
             // dataGridViewMatrix_NAN
@@ -343,7 +343,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.dataGridViewMatrix_NAN.RowHeadersVisible = false;
             this.dataGridViewMatrix_NAN.RowHeadersWidth = 51;
             this.dataGridViewMatrix_NAN.RowTemplate.Height = 24;
-            this.dataGridViewMatrix_NAN.Size = new System.Drawing.Size(684, 465);
+            this.dataGridViewMatrix_NAN.Size = new System.Drawing.Size(935, 465);
             this.dataGridViewMatrix_NAN.TabIndex = 0;
             // 
             // openFileDialog_NAN
@@ -365,11 +365,11 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 553);
+            this.ClientSize = new System.Drawing.Size(1382, 553);
             this.Controls.Add(this.panelRight_NAN);
             this.Controls.Add(this.panelLeft_NAN);
             this.Controls.Add(this.panelTop_NAN);
-            this.MinimumSize = new System.Drawing.Size(1149, 600);
+            this.MinimumSize = new System.Drawing.Size(1400, 600);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Спринт 7 | Project Task | Вариант 7 | Николаева А. Н.";

@@ -98,6 +98,56 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             textBoxMin_NAN.Text = Convert.ToString(minmax.Min());
         }
 
+        private void buttonFind_NAN_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridViewMatrix_NAN.RowCount; i++)
+            {
+                dataGridViewMatrix_NAN.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridViewMatrix_NAN.ColumnCount; j++)
+                {
+                    if (dataGridViewMatrix_NAN.Rows[i].Cells[j].Value != null)
+                    {
+                        if (dataGridViewMatrix_NAN.Rows[i].Cells[j].Value.ToString().Contains(textBoxFind_NAN.Text))
+                        {
+                            dataGridViewMatrix_NAN.Rows[i].Selected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
 
+        private void buttonFilter_NAN_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridViewMatrix_NAN.RowCount - 1; i++)
+            {
+                dataGridViewMatrix_NAN.Rows[i].Visible = false;
+                for (int j = 0; j < dataGridViewMatrix_NAN.ColumnCount; j++)
+                {
+                    if (dataGridViewMatrix_NAN.Rows[i].Cells[j].Value != null)
+                    {
+                        if (dataGridViewMatrix_NAN.Rows[i].Cells[j].Value.ToString().Contains(textBoxFilter_NAN.Text))
+                        {
+                            dataGridViewMatrix_NAN.Rows[i].Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void buttonFilterBack_NAN_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridViewMatrix_NAN.RowCount - 1; i++)
+            {
+                dataGridViewMatrix_NAN.Rows[i].Visible = true;
+            }
+        }
+
+        private void buttonSort_NAN_Click(object sender, EventArgs e)
+        {
+            int numSort = Convert.ToInt32(textBoxSort_NAN.Text);
+            dataGridViewMatrix_NAN.Sort(dataGridViewMatrix_NAN.Columns[numSort], ListSortDirection.Ascending);
+        }
     }
 }

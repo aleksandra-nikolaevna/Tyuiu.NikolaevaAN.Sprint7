@@ -49,7 +49,6 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // buttonOk_NAN
             // 
             this.buttonOk_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOk_NAN.Location = new System.Drawing.Point(495, 205);
             this.buttonOk_NAN.Name = "buttonOk_NAN";
             this.buttonOk_NAN.Size = new System.Drawing.Size(124, 34);
