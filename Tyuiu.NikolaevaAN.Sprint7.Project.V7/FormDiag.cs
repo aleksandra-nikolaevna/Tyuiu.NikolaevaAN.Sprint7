@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
 {
@@ -20,7 +21,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
 
         public static string[,] LoadFromFileData(string filePath)
         {
-            string fileData = File.ReadAllText(filePath, Encoding.Default);
+            string fileData = File.ReadAllText(filePath);
             fileData = fileData.Replace('\n', '\r');
             string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -41,7 +42,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
 
         private void FormDiag_Load(object sender, EventArgs e)
         {
-            string fileData = File.ReadAllText(@"C:\DataSprint7\NewPersons.csv", Encoding.Default);
+            string fileData = File.ReadAllText(@"C:\DataSprint7\NewPersons.csv");
             fileData = fileData.Replace('\n', '\r');
             string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
             int rows = lines.Length + 1;
@@ -79,14 +80,43 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
 
         private void buttonMembers_NAN_Click(object sender, EventArgs e)
         {
-            string fileData = File.ReadAllText(@"C:\DataSprint7\NewPersons.csv", Encoding.Default);
-            fileData = fileData.Replace('\n', '\r');
-            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
-            int rows = lines.Length + 1;
-            int columns = lines[0].Split(';').Length;
+            chartDiag_NAN.Series.Clear();
 
             //добавление в диаграмму
-            
+            int column = 4;  //номер нужного столбца
+            Series s = chartDiag_NAN.Series.Add("members");
+            s.ChartType = SeriesChartType.Pie;
+            s.IsValueShownAsLabel = true;
+            for (int i = 0; i < dataGridViewMatrix_NAN.Rows.Count; i++)
+            {
+                s.Points.AddXY(Convert.ToString(dataGridViewMatrix_NAN.Rows[i].Cells[3].Value), dataGridViewMatrix_NAN[column, i].Value);
+            }
+        }
+
+        private void buttonKids_NAN_Click(object sender, EventArgs e)
+        {
+            chartDiag_NAN.Series.Clear();
+            int column = 5;  //номер нужного столбца
+            Series s = chartDiag_NAN.Series.Add("kids");
+            s.ChartType = SeriesChartType.Pie;
+            s.IsValueShownAsLabel = true;
+            for (int i = 0; i < dataGridViewMatrix_NAN.Rows.Count; i++)
+            {
+                s.Points.AddXY(Convert.ToString(dataGridViewMatrix_NAN.Rows[i].Cells[3].Value), dataGridViewMatrix_NAN[column, i].Value);
+            }
+        }
+
+        private void buttonRooms_NAN_Click(object sender, EventArgs e)
+        {
+            chartDiag_NAN.Series.Clear();
+            int column = 2;  //номер нужного столбца
+            Series s = chartDiag_NAN.Series.Add("kids");
+            s.ChartType = SeriesChartType.Pie;
+            s.IsValueShownAsLabel = true;
+            for (int i = 0; i < dataGridViewMatrix_NAN.Rows.Count; i++)
+            {
+                s.Points.AddXY(Convert.ToString(dataGridViewMatrix_NAN.Rows[i].Cells[3].Value), dataGridViewMatrix_NAN[column, i].Value);
+            }
         }
     }
 }

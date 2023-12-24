@@ -76,7 +76,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelTop_NAN.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_NAN.Location = new System.Drawing.Point(0, 0);
             this.panelTop_NAN.Name = "panelTop_NAN";
-            this.panelTop_NAN.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelTop_NAN.Padding = new System.Windows.Forms.Padding(5);
             this.panelTop_NAN.Size = new System.Drawing.Size(1131, 78);
             this.panelTop_NAN.TabIndex = 0;
             // 
@@ -96,7 +96,6 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // buttonSort_NAN
             // 
             this.buttonSort_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSort_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSort_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSort_NAN.Location = new System.Drawing.Point(432, 14);
             this.buttonSort_NAN.Name = "buttonSort_NAN";
@@ -126,7 +125,6 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // buttonDiag_NAN
             // 
-            this.buttonDiag_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDiag_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDiag_NAN.Location = new System.Drawing.Point(9, 10);
             this.buttonDiag_NAN.Name = "buttonDiag_NAN";
@@ -139,7 +137,6 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // buttonHelp_NAN
             // 
             this.buttonHelp_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHelp_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonHelp_NAN.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_NAN.Image")));
             this.buttonHelp_NAN.Location = new System.Drawing.Point(1061, 7);
@@ -155,7 +152,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelLeft_NAN.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft_NAN.Location = new System.Drawing.Point(0, 78);
             this.panelLeft_NAN.Name = "panelLeft_NAN";
-            this.panelLeft_NAN.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelLeft_NAN.Padding = new System.Windows.Forms.Padding(5);
             this.panelLeft_NAN.Size = new System.Drawing.Size(437, 475);
             this.panelLeft_NAN.TabIndex = 1;
             // 
@@ -180,7 +177,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.groupBoxAddPerson_NAN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxAddPerson_NAN.Location = new System.Drawing.Point(5, 5);
             this.groupBoxAddPerson_NAN.Name = "groupBoxAddPerson_NAN";
-            this.groupBoxAddPerson_NAN.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBoxAddPerson_NAN.Padding = new System.Windows.Forms.Padding(5);
             this.groupBoxAddPerson_NAN.Size = new System.Drawing.Size(427, 465);
             this.groupBoxAddPerson_NAN.TabIndex = 0;
             this.groupBoxAddPerson_NAN.TabStop = false;
@@ -189,7 +186,6 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // buttonAddPerson_NAN
             // 
             this.buttonAddPerson_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddPerson_NAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddPerson_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddPerson_NAN.Location = new System.Drawing.Point(285, 411);
             this.buttonAddPerson_NAN.Name = "buttonAddPerson_NAN";
@@ -331,7 +327,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelRight_NAN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRight_NAN.Location = new System.Drawing.Point(437, 78);
             this.panelRight_NAN.Name = "panelRight_NAN";
-            this.panelRight_NAN.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelRight_NAN.Padding = new System.Windows.Forms.Padding(5);
             this.panelRight_NAN.Size = new System.Drawing.Size(694, 475);
             this.panelRight_NAN.TabIndex = 2;
             // 
