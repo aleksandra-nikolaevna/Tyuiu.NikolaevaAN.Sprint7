@@ -29,12 +29,15 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelLeft_NAN = new System.Windows.Forms.Panel();
             this.chartDiag_NAN = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBoxDiag_NAN = new System.Windows.Forms.GroupBox();
+            this.labelRooms_NAN = new System.Windows.Forms.Label();
+            this.buttonRooms_NAN = new System.Windows.Forms.Button();
             this.labelKids_NAN = new System.Windows.Forms.Label();
             this.labelMembers_NAN = new System.Windows.Forms.Label();
             this.buttonKids_NAN = new System.Windows.Forms.Button();
@@ -42,8 +45,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.splitter_NAN = new System.Windows.Forms.Splitter();
             this.panelRight_NAN = new System.Windows.Forms.Panel();
             this.dataGridViewMatrix_NAN = new System.Windows.Forms.DataGridView();
-            this.buttonRooms_NAN = new System.Windows.Forms.Button();
-            this.labelRooms_NAN = new System.Windows.Forms.Label();
+            this.toolTip_NAN = new System.Windows.Forms.ToolTip(this.components);
             this.panelLeft_NAN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDiag_NAN)).BeginInit();
             this.groupBoxDiag_NAN.SuspendLayout();
@@ -64,6 +66,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // chartDiag_NAN
             // 
+            this.chartDiag_NAN.BackColor = System.Drawing.Color.LightCyan;
             chartArea3.Name = "ChartArea1";
             this.chartDiag_NAN.ChartAreas.Add(chartArea3);
             this.chartDiag_NAN.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -83,6 +86,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // groupBoxDiag_NAN
             // 
+            this.groupBoxDiag_NAN.BackColor = System.Drawing.Color.LightCyan;
             this.groupBoxDiag_NAN.Controls.Add(this.labelRooms_NAN);
             this.groupBoxDiag_NAN.Controls.Add(this.buttonRooms_NAN);
             this.groupBoxDiag_NAN.Controls.Add(this.labelKids_NAN);
@@ -96,6 +100,27 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.groupBoxDiag_NAN.TabIndex = 0;
             this.groupBoxDiag_NAN.TabStop = false;
             this.groupBoxDiag_NAN.Text = "Выбор диаграммы:";
+            // 
+            // labelRooms_NAN
+            // 
+            this.labelRooms_NAN.AutoSize = true;
+            this.labelRooms_NAN.Location = new System.Drawing.Point(106, 36);
+            this.labelRooms_NAN.Name = "labelRooms_NAN";
+            this.labelRooms_NAN.Size = new System.Drawing.Size(299, 19);
+            this.labelRooms_NAN.TabIndex = 6;
+            this.labelRooms_NAN.Text = "Диаграмма по количеству комнат в квартире";
+            // 
+            // buttonRooms_NAN
+            // 
+            this.buttonRooms_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
+            this.buttonRooms_NAN.Location = new System.Drawing.Point(8, 26);
+            this.buttonRooms_NAN.Name = "buttonRooms_NAN";
+            this.buttonRooms_NAN.Size = new System.Drawing.Size(91, 37);
+            this.buttonRooms_NAN.TabIndex = 5;
+            this.buttonRooms_NAN.Text = "Показать";
+            this.toolTip_NAN.SetToolTip(this.buttonRooms_NAN, "Вывести на экран диаграмму по количеству\r\nкомнат в квартире");
+            this.buttonRooms_NAN.UseVisualStyleBackColor = false;
+            this.buttonRooms_NAN.Click += new System.EventHandler(this.buttonRooms_NAN_Click);
             // 
             // labelKids_NAN
             // 
@@ -117,22 +142,26 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // buttonKids_NAN
             // 
+            this.buttonKids_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
             this.buttonKids_NAN.Location = new System.Drawing.Point(8, 112);
             this.buttonKids_NAN.Name = "buttonKids_NAN";
             this.buttonKids_NAN.Size = new System.Drawing.Size(91, 35);
             this.buttonKids_NAN.TabIndex = 1;
             this.buttonKids_NAN.Text = "Показать";
-            this.buttonKids_NAN.UseVisualStyleBackColor = true;
+            this.toolTip_NAN.SetToolTip(this.buttonKids_NAN, "Вывести на экран диаграмму по количеству\r\nдетей в семье\r\n");
+            this.buttonKids_NAN.UseVisualStyleBackColor = false;
             this.buttonKids_NAN.Click += new System.EventHandler(this.buttonKids_NAN_Click);
             // 
             // buttonMembers_NAN
             // 
+            this.buttonMembers_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
             this.buttonMembers_NAN.Location = new System.Drawing.Point(8, 69);
             this.buttonMembers_NAN.Name = "buttonMembers_NAN";
             this.buttonMembers_NAN.Size = new System.Drawing.Size(91, 37);
             this.buttonMembers_NAN.TabIndex = 0;
             this.buttonMembers_NAN.Text = "Показать";
-            this.buttonMembers_NAN.UseVisualStyleBackColor = true;
+            this.toolTip_NAN.SetToolTip(this.buttonMembers_NAN, "Вывести на экран диаграмму по количеству\r\nчленов семьи\r\n");
+            this.buttonMembers_NAN.UseVisualStyleBackColor = false;
             this.buttonMembers_NAN.Click += new System.EventHandler(this.buttonMembers_NAN_Click);
             // 
             // splitter_NAN
@@ -155,6 +184,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // dataGridViewMatrix_NAN
             // 
+            this.dataGridViewMatrix_NAN.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.dataGridViewMatrix_NAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMatrix_NAN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewMatrix_NAN.Location = new System.Drawing.Point(5, 5);
@@ -165,29 +195,16 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.dataGridViewMatrix_NAN.Size = new System.Drawing.Size(412, 493);
             this.dataGridViewMatrix_NAN.TabIndex = 0;
             // 
-            // buttonRooms_NAN
+            // toolTip_NAN
             // 
-            this.buttonRooms_NAN.Location = new System.Drawing.Point(8, 26);
-            this.buttonRooms_NAN.Name = "buttonRooms_NAN";
-            this.buttonRooms_NAN.Size = new System.Drawing.Size(91, 37);
-            this.buttonRooms_NAN.TabIndex = 5;
-            this.buttonRooms_NAN.Text = "Показать";
-            this.buttonRooms_NAN.UseVisualStyleBackColor = true;
-            this.buttonRooms_NAN.Click += new System.EventHandler(this.buttonRooms_NAN_Click);
-            // 
-            // labelRooms_NAN
-            // 
-            this.labelRooms_NAN.AutoSize = true;
-            this.labelRooms_NAN.Location = new System.Drawing.Point(106, 36);
-            this.labelRooms_NAN.Name = "labelRooms_NAN";
-            this.labelRooms_NAN.Size = new System.Drawing.Size(299, 19);
-            this.labelRooms_NAN.TabIndex = 6;
-            this.labelRooms_NAN.Text = "Диаграмма по количеству комнат в квартире";
+            this.toolTip_NAN.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip_NAN.ToolTipTitle = "Подсказка";
             // 
             // FormDiag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1082, 503);
             this.Controls.Add(this.panelRight_NAN);
             this.Controls.Add(this.splitter_NAN);
@@ -222,5 +239,6 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDiag_NAN;
         private System.Windows.Forms.Button buttonRooms_NAN;
         private System.Windows.Forms.Label labelRooms_NAN;
+        private System.Windows.Forms.ToolTip toolTip_NAN;
     }
 }

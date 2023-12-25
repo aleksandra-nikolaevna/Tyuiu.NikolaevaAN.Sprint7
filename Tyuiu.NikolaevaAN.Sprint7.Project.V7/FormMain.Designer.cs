@@ -32,6 +32,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelTop_NAN = new System.Windows.Forms.Panel();
+            this.buttonStat_NAN = new System.Windows.Forms.Button();
             this.groupBoxSort_NAN = new System.Windows.Forms.GroupBox();
             this.buttonSort_NAN = new System.Windows.Forms.Button();
             this.labelSort_NAN = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.openFileDialog_NAN = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_NAN = new System.Windows.Forms.SaveFileDialog();
             this.toolTip_NAN = new System.Windows.Forms.ToolTip(this.components);
-            this.buttonStat_NAN = new System.Windows.Forms.Button();
             this.panelTop_NAN.SuspendLayout();
             this.groupBoxSort_NAN.SuspendLayout();
             this.panelLeft_NAN.SuspendLayout();
@@ -71,6 +71,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // panelTop_NAN
             // 
+            this.panelTop_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panelTop_NAN.Controls.Add(this.buttonStat_NAN);
             this.panelTop_NAN.Controls.Add(this.groupBoxSort_NAN);
             this.panelTop_NAN.Controls.Add(this.buttonDiag_NAN);
@@ -82,8 +83,22 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             this.panelTop_NAN.Size = new System.Drawing.Size(1382, 78);
             this.panelTop_NAN.TabIndex = 0;
             // 
+            // buttonStat_NAN
+            // 
+            this.buttonStat_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
+            this.buttonStat_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonStat_NAN.Location = new System.Drawing.Point(150, 10);
+            this.buttonStat_NAN.Name = "buttonStat_NAN";
+            this.buttonStat_NAN.Size = new System.Drawing.Size(109, 57);
+            this.buttonStat_NAN.TabIndex = 3;
+            this.buttonStat_NAN.Text = "Статистика";
+            this.toolTip_NAN.SetToolTip(this.buttonStat_NAN, "Посмотреть статистику жильцов и выполнить поиск,\r\nфильтрацию и сортировку");
+            this.buttonStat_NAN.UseVisualStyleBackColor = false;
+            this.buttonStat_NAN.Click += new System.EventHandler(this.buttonStat_NAN_Click);
+            // 
             // groupBoxSort_NAN
             // 
+            this.groupBoxSort_NAN.BackColor = System.Drawing.Color.LightCyan;
             this.groupBoxSort_NAN.Controls.Add(this.buttonSort_NAN);
             this.groupBoxSort_NAN.Controls.Add(this.labelSort_NAN);
             this.groupBoxSort_NAN.Controls.Add(this.textBoxSort_NAN);
@@ -98,13 +113,15 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // buttonSort_NAN
             // 
             this.buttonSort_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSort_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
             this.buttonSort_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSort_NAN.Location = new System.Drawing.Point(432, 14);
             this.buttonSort_NAN.Name = "buttonSort_NAN";
             this.buttonSort_NAN.Size = new System.Drawing.Size(130, 38);
             this.buttonSort_NAN.TabIndex = 2;
             this.buttonSort_NAN.Text = "Сортировать";
-            this.buttonSort_NAN.UseVisualStyleBackColor = true;
+            this.toolTip_NAN.SetToolTip(this.buttonSort_NAN, "Выполнить сортировку по выбранному столбцу");
+            this.buttonSort_NAN.UseVisualStyleBackColor = false;
             this.buttonSort_NAN.Click += new System.EventHandler(this.buttonSort_NAN_Click);
             // 
             // labelSort_NAN
@@ -127,29 +144,34 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // buttonDiag_NAN
             // 
+            this.buttonDiag_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
             this.buttonDiag_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDiag_NAN.Location = new System.Drawing.Point(9, 10);
             this.buttonDiag_NAN.Name = "buttonDiag_NAN";
             this.buttonDiag_NAN.Size = new System.Drawing.Size(134, 57);
             this.buttonDiag_NAN.TabIndex = 1;
             this.buttonDiag_NAN.Text = "Посмотреть диаграмму";
-            this.buttonDiag_NAN.UseVisualStyleBackColor = true;
+            this.toolTip_NAN.SetToolTip(this.buttonDiag_NAN, "Посмотреть диаграммы по таблице с данными жильцов");
+            this.buttonDiag_NAN.UseVisualStyleBackColor = false;
             this.buttonDiag_NAN.Click += new System.EventHandler(this.buttonDiag_NAN_Click);
             // 
             // buttonHelp_NAN
             // 
             this.buttonHelp_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
             this.buttonHelp_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonHelp_NAN.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_NAN.Image")));
             this.buttonHelp_NAN.Location = new System.Drawing.Point(1312, 7);
             this.buttonHelp_NAN.Name = "buttonHelp_NAN";
             this.buttonHelp_NAN.Size = new System.Drawing.Size(64, 64);
             this.buttonHelp_NAN.TabIndex = 0;
-            this.buttonHelp_NAN.UseVisualStyleBackColor = true;
+            this.toolTip_NAN.SetToolTip(this.buttonHelp_NAN, "Сведения о программе");
+            this.buttonHelp_NAN.UseVisualStyleBackColor = false;
             this.buttonHelp_NAN.Click += new System.EventHandler(this.buttonHelp_NAN_Click);
             // 
             // panelLeft_NAN
             // 
+            this.panelLeft_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panelLeft_NAN.Controls.Add(this.groupBoxAddPerson_NAN);
             this.panelLeft_NAN.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft_NAN.Location = new System.Drawing.Point(0, 78);
@@ -160,6 +182,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // groupBoxAddPerson_NAN
             // 
+            this.groupBoxAddPerson_NAN.BackColor = System.Drawing.Color.LightCyan;
             this.groupBoxAddPerson_NAN.Controls.Add(this.buttonAddPerson_NAN);
             this.groupBoxAddPerson_NAN.Controls.Add(this.textBoxArrears_NAN);
             this.groupBoxAddPerson_NAN.Controls.Add(this.labelArrears_NAN);
@@ -188,13 +211,15 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // buttonAddPerson_NAN
             // 
             this.buttonAddPerson_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddPerson_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
             this.buttonAddPerson_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddPerson_NAN.Location = new System.Drawing.Point(285, 411);
             this.buttonAddPerson_NAN.Name = "buttonAddPerson_NAN";
             this.buttonAddPerson_NAN.Size = new System.Drawing.Size(138, 50);
             this.buttonAddPerson_NAN.TabIndex = 14;
             this.buttonAddPerson_NAN.Text = "Добавить пользователя";
-            this.buttonAddPerson_NAN.UseVisualStyleBackColor = true;
+            this.toolTip_NAN.SetToolTip(this.buttonAddPerson_NAN, "Добавляет в таблицу данные о новом жильце");
+            this.buttonAddPerson_NAN.UseVisualStyleBackColor = false;
             this.buttonAddPerson_NAN.Click += new System.EventHandler(this.buttonAddPerson_NAN_Click);
             // 
             // textBoxArrears_NAN
@@ -325,6 +350,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             // panelRight_NAN
             // 
+            this.panelRight_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.panelRight_NAN.Controls.Add(this.dataGridViewMatrix_NAN);
             this.panelRight_NAN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRight_NAN.Location = new System.Drawing.Point(437, 78);
@@ -336,6 +362,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // dataGridViewMatrix_NAN
             // 
             this.dataGridViewMatrix_NAN.AllowUserToOrderColumns = true;
+            this.dataGridViewMatrix_NAN.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.dataGridViewMatrix_NAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMatrix_NAN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewMatrix_NAN.Location = new System.Drawing.Point(5, 5);
@@ -350,21 +377,16 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             this.openFileDialog_NAN.FileName = "openFileDialog1";
             // 
-            // buttonStat_NAN
+            // toolTip_NAN
             // 
-            this.buttonStat_NAN.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStat_NAN.Location = new System.Drawing.Point(150, 10);
-            this.buttonStat_NAN.Name = "buttonStat_NAN";
-            this.buttonStat_NAN.Size = new System.Drawing.Size(109, 57);
-            this.buttonStat_NAN.TabIndex = 3;
-            this.buttonStat_NAN.Text = "Статистика";
-            this.buttonStat_NAN.UseVisualStyleBackColor = true;
-            this.buttonStat_NAN.Click += new System.EventHandler(this.buttonStat_NAN_Click);
+            this.toolTip_NAN.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip_NAN.ToolTipTitle = "Подсказка";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1382, 553);
             this.Controls.Add(this.panelRight_NAN);
             this.Controls.Add(this.panelLeft_NAN);

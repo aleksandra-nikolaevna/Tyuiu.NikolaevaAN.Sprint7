@@ -58,39 +58,44 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
                 string members = Convert.ToString(textBoxMembers_NAN.Text);
                 string kids = Convert.ToString(textBoxKids_NAN.Text);
                 string arrears = Convert.ToString(textBoxArrears_NAN.Text);
-
-                //вывод в таблицу
-                this.dataGridViewMatrix_NAN.Rows.Add(entrance, flat, rooms, surname, members, kids, arrears);
-                rows += 1;
-
-                //сохранение в файл
-                saveFileDialog_NAN.FileName = @"C:\DataSprint7\NewPersons.csv";
-                string path = saveFileDialog_NAN.FileName;
-                FileInfo fileInfo = new FileInfo(path);
-                bool fileExists = fileInfo.Exists;
-                if (fileExists)
+                if ((entrance == "") || (flat == "") || (rooms == "") || (surname == "") || (members == "") || (kids == "") || (arrears == ""))
                 {
-                    File.Delete(path);
+                    MessageBox.Show("Заполните все строки", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {//вывод в таблицу
+                    this.dataGridViewMatrix_NAN.Rows.Add(entrance, flat, rooms, surname, members, kids, arrears);
+                    rows += 1;
 
-                int row = dataGridViewMatrix_NAN.RowCount;
-                int column = dataGridViewMatrix_NAN.ColumnCount;
-                string str = "";
-                for (int i = 0; i < (row - 1); i++)
-                {
-                    for (int j = 0; j < column; j++)
+                    //сохранение в файл
+                    saveFileDialog_NAN.FileName = @"C:\DataSprint7\NewPersons.csv";
+                    string path = saveFileDialog_NAN.FileName;
+                    FileInfo fileInfo = new FileInfo(path);
+                    bool fileExists = fileInfo.Exists;
+                    if (fileExists)
                     {
-                        if (j != columns - 1)
-                        {
-                            str = str + dataGridViewMatrix_NAN.Rows[i].Cells[j].Value + ";";
-                        }
-                        else
-                        {
-                            str = str + dataGridViewMatrix_NAN.Rows[i].Cells[j].Value;
-                        }
+                        File.Delete(path);
                     }
-                    File.AppendAllText(path, str + Environment.NewLine);
-                    str = "";
+
+                    int row = dataGridViewMatrix_NAN.RowCount;
+                    int column = dataGridViewMatrix_NAN.ColumnCount;
+                    string str = "";
+                    for (int i = 0; i < (row - 1); i++)
+                    {
+                        for (int j = 0; j < column; j++)
+                        {
+                            if (j != columns - 1)
+                            {
+                                str = str + dataGridViewMatrix_NAN.Rows[i].Cells[j].Value + ";";
+                            }
+                            else
+                            {
+                                str = str + dataGridViewMatrix_NAN.Rows[i].Cells[j].Value;
+                            }
+                        }
+                        File.AppendAllText(path, str + Environment.NewLine);
+                        str = "";
+                    }
                 }
             }
             catch

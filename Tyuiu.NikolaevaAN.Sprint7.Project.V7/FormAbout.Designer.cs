@@ -49,17 +49,19 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // buttonOk_NAN
             // 
             this.buttonOk_NAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk_NAN.Location = new System.Drawing.Point(495, 205);
+            this.buttonOk_NAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(204)))), ((int)(((byte)(252)))));
+            this.buttonOk_NAN.Location = new System.Drawing.Point(515, 211);
             this.buttonOk_NAN.Name = "buttonOk_NAN";
-            this.buttonOk_NAN.Size = new System.Drawing.Size(124, 34);
+            this.buttonOk_NAN.Size = new System.Drawing.Size(104, 28);
             this.buttonOk_NAN.TabIndex = 1;
             this.buttonOk_NAN.Text = "ОК";
-            this.buttonOk_NAN.UseVisualStyleBackColor = true;
+            this.buttonOk_NAN.UseVisualStyleBackColor = false;
             this.buttonOk_NAN.Click += new System.EventHandler(this.buttonOk_NAN_Click);
             // 
             // labelInfo_NAN
             // 
             this.labelInfo_NAN.AutoSize = true;
+            this.labelInfo_NAN.BackColor = System.Drawing.Color.LightCyan;
             this.labelInfo_NAN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelInfo_NAN.Location = new System.Drawing.Point(241, 13);
             this.labelInfo_NAN.Name = "labelInfo_NAN";
@@ -71,6 +73,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(633, 251);
             this.Controls.Add(this.labelInfo_NAN);
             this.Controls.Add(this.buttonOk_NAN);

@@ -84,6 +84,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
 
             //добавление в диаграмму
             int column = 4;  //номер нужного столбца
+            this.chartDiag_NAN.Palette = ChartColorPalette.SeaGreen;
             Series s = chartDiag_NAN.Series.Add("members");
             s.ChartType = SeriesChartType.Pie;
             s.IsValueShownAsLabel = true;
@@ -97,6 +98,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         {
             chartDiag_NAN.Series.Clear();
             int column = 5;  //номер нужного столбца
+            this.chartDiag_NAN.Palette = ChartColorPalette.SeaGreen;
             Series s = chartDiag_NAN.Series.Add("kids");
             s.ChartType = SeriesChartType.Pie;
             s.IsValueShownAsLabel = true;
@@ -110,6 +112,7 @@ namespace Tyuiu.NikolaevaAN.Sprint7.Project.V7
         {
             chartDiag_NAN.Series.Clear();
             int column = 2;  //номер нужного столбца
+            this.chartDiag_NAN.Palette = ChartColorPalette.SeaGreen;
             Series s = chartDiag_NAN.Series.Add("kids");
             s.ChartType = SeriesChartType.Pie;
             s.IsValueShownAsLabel = true;
